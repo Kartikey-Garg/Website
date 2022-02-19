@@ -1,0 +1,196 @@
+
+
+body {
+	margin: 0;
+  	padding: 0;
+  	font-size: 16px;
+  	color: #222;
+	background-image: url("../img/i.jpg");
+	background-size:cover;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 300;
+	
+	
+}
+
+
+
+::placeholder {
+	color:black;
+	opacity:0.7;
+	font-weight:900;
+	font-family:arial black;
+}
+
+
+#login-box {
+  	position: relative;
+  	margin: 5% auto;
+  	width: 400px;
+	margin-top:2%;
+  	height: 830px;
+  	border-radius: 20px;
+  	box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.4);
+	background-size:cover;
+	
+}
+
+.left {
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	box-sizing: border-box;
+  	padding: 40px;
+  	width: 400px;
+  	height: 520px;
+	background-image: url("../img/b.jpg");
+	border-radius:20px 20px 0 0;
+	
+}
+
+h1 {
+  	font-weight: 300;
+  	font-size: 28px;
+	font-family:Arial black;
+	margin-left:30%;
+	margin-top:0%;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] 
+{
+  	display: block;
+  	box-sizing: border-box;
+  	margin-bottom: 20px;
+  	padding: 4px;
+  	width: 220px;
+  	height: 32px;
+	margin-left:10%;
+ 	border: none;
+  	border-bottom: 1px solid #AAA;
+  	font-family: 'Roboto', sans-serif;
+ 	font-weight: 1000;
+ 	font-size: 15px;
+	background:none;
+	opacity:0.5;
+  	transition: 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus
+{
+  	border-bottom: 2px solid red;
+  	color: black;
+	font-weight: 900;
+ 	transition: 0.2s ease;
+	outline: none;
+}
+
+input[type="submit"]
+{
+  	margin-top:2%;
+  	width: 120px;
+  	height: 42px;
+  	background: #16a085;
+  	border: none;
+	margin-left:30%;
+ 	border-radius: 8px;
+	color: #FFF;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+ 	cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  	opacity: 1.2;
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  	transition: 0.2s ease;
+	transform:scale(1.1);
+}
+
+input[type="submit"]:active {
+  	opacity: 1;
+  	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  	transition: 0.2s ease;	
+	border:none;
+}
+
+.or {
+  	position: absolute;
+  	top: 505px;
+  	margin-left:45%;
+	margin-right:auto;
+ 	width: 40px;
+ 	height: 40px;
+  	background: none;
+  	border-radius: 50%;
+  	line-height: 40px;
+  	text-align: center;
+	background-color:grey;
+}
+
+.right {
+  	position: absolute;
+  	margin-top:130%;
+	margin-left:0%;
+ 	box-sizing: border-box;
+  	padding: 40px;
+  	width: 400px;
+  	height: 330px;
+  	background-position: center;
+  	border-radius: 0 0 20px 20px;
+	background-image: url("../img/c.png");
+}
+
+.right .loginwith {
+  	display: block;
+	margin-left:0%;
+	margin-top:0%;
+  	font-size: 24px;
+  	color: black;
+  	text-align: center;
+}
+
+a button.social-signin {
+  	margin-bottom: 20px;
+	margin-left:15%;
+  	width: 220px;
+  	height: 35px;
+  	border: none;
+  	border-radius: 8px;
+  	color: #FFF;
+  	font-family: 'Roboto', sans-serif;
+  	font-weight: 500;
+  	transition: 0.3s ease;
+  	cursor: pointer;
+}
+
+a button.social-signin:hover,
+a button.social-signin:focus {
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  	transition: 0.2s ease;
+	transform:scale(1.1);
+}
+
+a button.social-signin:active {
+  	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  	transition: 0.2s ease;
+}
+
+a button.social-signin.facebook {
+  	background: #32508E;
+}
+
+a button.social-signin.twitter {
+  	background: #55ACEE;
+}
+
+a button.social-signin.google {
+  	background: #DD4B39;
+}

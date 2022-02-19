@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    
+   
+    <style>
+    
+     :root{ --main-color: red; }
+/*****************************************************************/	
+body {
+	margin:0;
+	padding:0;
+	background-image: linear-gradient(125deg,#e0eafc,#b6fbff,#c9ffbf,#cfdef3);
+	background-size:200%;
+	animation:bganimation 15s infinite;
+}
+
+@keyframes bganimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position:100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.cat-title {	
+		margin-left:40%;
+		top:10%; 
+		color:#323232;
+		font-size:350%;
+		text-transform:uppercase;
+		letter-spacing:5px;
+		line-height:40px;
+		padding-bottom:5%;
+		padding-top:3%;
+}
+
+
+hr {
+	border:1px solid black;
+}
+
+
+
+
+	.footr {
+		border:2px solid #323232;
+		background-color:#323232;
+		width:99.7%;
+		margin-top:10%px;
+		padding-top:1.5%;
+		padding-bottom:2%;
+		overflow:auto;
+	}
+
+	.footer-bottom {
+		background:#323232;
+		color:#686868;
+		height:40px;
+		width:100%;
+		text-align:center;
+		padding-top:10px;
+	}
+
+	.footr-two-col {
+		width:33%;
+		float:left;
+	}
+
+	.footr-link a:link {
+		font-size:120%;
+		color:white;
+	}
+
+	.footr-link a:visited {
+		color:white;
+	}
+
+	.footr-link a:hover {
+		color:#686868;
+	}
+
+	.navbar {
+		overflow: hidden;
+		background-color: #323232;
+		position:fixed;
+		width:100%;
+		padding:4px 16px;z-index:5;
+	}
+	.navimg {
+		float:right;
+		padding-right:10px;
+		font-size: 100%;
+	}
+	.tab a {
+ 		float:left;
+		display: block;
+		color: #cccfd1;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 100%;
+		font-family: "georgia";
+		padding-left:20px;
+	}
+	.tab a:hover {
+		color:#d1d1d1;
+		background-color:#565759;
+		border-radius:4px;
+	}
+
+	.navimg a {
+ 		float:left;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: "georgia";
+		padding-left:20px;
+	}
+	.navimg a:hover {
+		color:#133246;
+		border-radius:4px;
+	}
+/************************************************************/
+.product-grid{
+    font-family: 'Roboto', sans-serif;
+    position: relative;	
+    border:2px solid #323232;
+    height:350px;
+    width:275px;
+}
+.product-grid .product-image{
+    overflow: hidden;
+    position: relative;
+}
+.product-grid .product-image:before{
+    content: "";
+    background: rgba(0,0,0,0.3);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all 0.4s ease-out 0s;
+}
+.product-grid:hover .product-image:before{ opacity: 1; }
+.product-grid .product-image a{ display: block; }
+.product-grid .product-image img{
+    width: 100%;
+    height: auto;
+}
+.product-image .pic-1{
+    opacity: 1;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out 0s;
+}
+.product-grid:hover .product-image .pic-1{ opacity: 0; }
+.product-image .pic-2{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    backface-visibility: hidden;
+    transform: scale(3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.4s ease-out 0s;
+}
+.product-grid:hover .product-image .pic-2 {
+    opacity: 1;
+    transform: scale(1);
+}
+.product-image .product-trend-label,
+.product-image .product-discount-label{
+    content: "";
+    color: #fff;
+    background-color: #2ecc71;
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 7px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 3;
+}
+.product-image .product-discount-label{
+    background-color: var(--main-color);
+    left: auto;
+    right: 12px;
+}
+
+
+.product-grid .product-content{ padding: 12px 0; }
+.product-grid .title{
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color:black;
+    margin: 0 0 5px;
+}
+.product-grid .title a{ color: black; }
+.product-grid .title a:hover{ color: var(--main-color); }
+.product-grid .price{
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+}
+.product-grid .price span{
+    color: #333;
+    text-decoration: line-through;
+    margin-right: 3px;
+}
+.product-grid .price.discount{ color: var(--main-color); }
+
+    .product-grid{ margin-bottom: 30px; }
+
+	@media (max-width:768px) {
+
+		body, html {
+			height:100%;
+			margin:0;
+			line-height:180%;
+			color:#666;
+			text-align:center;
+		}
+
+		.navbar {
+			width:100%;
+		}
+
+		.tab a {
+			padding-left:5px;
+			font-size:80%;
+		}
+
+
+		.footr-two-col {
+			width:90%;
+			padding-bottom:2%;
+			margin:0 auto;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+
+		.footr {
+			width:98.9%;
+			margin-top:10%px;
+			padding-top:1.5%;
+			padding-bottom:2%;
+			overflow:hidden;
+		}
+
+
+		.navimg { 
+			float:left;
+		}
+		
+		.tab a {
+			float:left;
+		}
+		.cat-title {
+			margin-top:10%;
+			font-size:150%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+		.product-grid{	
+    			border:2px solid #323232;
+    			height:auto;
+    			width:60%;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+	}
+    
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+	<div class="tab">
+		<a class="active" href="../index.html">HOME</a>
+		<a href="../css/login.html">LOGIN</a>		
+		<a href="../css/category.html">PRODUCTS</a>
+		<a href="../css/about_2.html">ABOUT US</a>			
+	</div>
+	<div class="navimg">
+		<a href="https://www.facebook.com/nannu.garg.106"><img src="../img/fb.png" width="45px"></a>
+		<a href="https://www.instagram.com/kartikey.garg.106/"><img src="../img/insta.png" width="45px"></a>
+		<a href="https://twitter.com/kartikeygarg57"><img src="../img/twitter.png" width="45px"></a>	
+	</div>
+</div>
+<br><br><br><br>
+<div class="cat-title">CHAIRS</div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/300.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/300-2.jpg" style="height:240px">
+                    </a>
+                    <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">38%</span>
+                  
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/nilkamal-2060-plastic-outdoor-chair/p/itmcc3b04400aefe?pid=OTCFWG5ESXHTEFZ9&lid=LSTOTCFWG5ESXHTEFZ9YDBSPT&marketplace=FLIPKART&q=chairs&store=wwe%2Fy7b&srno=s_1_6&otracker=search&otracker1=search&fm=Search&iid=e2496910-47e5-4bcd-95a3-84d5559b5c40.OTCFWG5ESXHTEFZ9.SEARCH&ppt=sp&ppn=sp&ssid=mf715ctgls0000001645166927932&qH=086f25da48a08f06">Nilkamal 2060 Plastic Outdoor Chair  (Gloss, Set of 2, Pre-assembled)</a></h3>
+                    <div class="price discount"><span>Rs.2,200</span>Rs.1,364</div>
+                </div>
+            </div>
+        </div>  
+
+
+
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/msi.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/msi-2.jpg" style="height:240px">
+                    </a>
+                    <span class="product-trend-label">ON SALE</span>
+                    <span class="product-discount-label">11%</span>
+                   
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/supreme-futura-plastic-outdoor-chair/p/itmdff7c53e103e4?pid=OTCF8PZ6FJ4Z75H3&lid=LSTOTCF8PZ6FJ4Z75H3HBBEL7&marketplace=FLIPKART&q=chairs&store=wwe%2Fy7b&srno=s_1_33&otracker=search&otracker1=search&fm=Search&iid=fc1f19c3-bd83-494d-8459-519dacd616cd.OTCF8PZ6FJ4Z75H3.SEARCH&ppt=browse&ppn=browse&ssid=q3rgif9jcw0000001645164356070&qH=086f25da48a08f06">Supreme Futura Plastic Outdoor</a></h3>
+                    <div class="price discount"><span>Rs. 1,149</span> Rs.1,023</div>
+                </div>
+            </div>
+        </div>
+           
+           
+           
+           <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/rog.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/rog-2.jpg" style="height:240px">
+                    </a>
+                   
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/anmol-texture-maharaja-chair-brown-plastic-outdoor/p/itma1cf22f76aa41?pid=OTCG3N7AYHX5UQMY&lid=LSTOTCG3N7AYHX5UQMY37MWQE&marketplace=FLIPKART&q=chairs&store=wwe%2Fy7b&srno=s_1_3&otracker=search&otracker1=search&fm=Search&iid=fc1f19c3-bd83-494d-8459-519dacd616cd.OTCG3N7AYHX5UQMY.SEARCH&ppt=browse&ppn=browse&ssid=q3rgif9jcw0000001645164356070&qH=086f25da48a08f06">Anmol Texture Maharaja Chair (Brown) Plastic Outdoor Chair  (Dark Brown, Set of 4, Pre-assembled)
+                    </a></h3>
+                    <div class="price discount"> Rs.2550</div>
+                </div>
+            </div>
+        </div> 
+           
+            
+              <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/om.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/om-2.jpg" style="height:240px">
+                    </a>
+                  
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/avro-furniture-9925-plastic-chairs-living-room-chair/p/itm65186ca7dcef7?pid=LRCG4FUDSAUJPDYR&lid=LSTLRCG4FUDSAUJPDYRQJG9MX&marketplace=FLIPKART&q=chairs&store=wwe%2Fy7b&srno=s_1_17&otracker=search&otracker1=search&fm=Search&iid=7f459244-d85f-40dc-bcd6-8c218ee39723.LRCG4FUDSAUJPDYR.SEARCH&ppt=pp&ppn=pp&ssid=5rgpal4nnk0000001645167702150&qH=086f25da48a08f06">AVRO furniture AVRO FURNITURE 9925 Plastic Chairs Plastic Living Room Chair  (Finish Color - Brown, Pre-assembled)</a></h3>
+                    <div class="price discount"> Rs.1,02,551</div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+
+
+<hr>
+<div class="cat-title">BOTTLES</div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/z.jpg" style="height:240px;padding-left:50px;padding-right:50px">
+                        <img class="pic-2" src="../img/z.jpg" style="height:240px;padding-left:50px;padding-right:50px">
+                    </a>
+                    <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">1%</span>
+                  
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/princeware-aster-500-ml-bottle/p/itmf6bbd9f3d8895?pid=BOTFVHAJGKVFBAZF&lid=LSTBOTFVHAJGKVFBAZFPOFROZ&marketplace=GROCERY&q=plastic+bottles&store=upp%2Ff2k%2F0zz&srno=s_1_6&otracker=search&otracker1=search&fm=Search&iid=5e316c9f-49d5-4da0-8b9a-8c271cf605a4.BOTFVHAJGKVFBAZF.SEARCH&ppt=sp&ppn=sp&ssid=kkzccohfkw0000001645167943485&qH=22462580b1e78d2a">PRINCEWARE Aster 500 ml Bottle  (Pack of 1, Pink, Plastic)</a></h3>
+                    <div class="price discount"><span>Rs.13</span>Rs.12</div>
+                </div>
+            </div>
+        </div>  
+
+
+
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/d4.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/d3.jpg" style="height:240px">
+                    </a>
+                    
+                   
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/cello-h2o-1000-ml-bottle/p/itm667ca281bcb72?pid=BOTEMTA4GWWCGBC6&lid=LSTBOTEMTA4GWWCGBC6QGFSZS&marketplace=FLIPKART&q=plastic+bottles&store=upp%2Ff2k%2F0zz&srno=s_1_11&otracker=search&otracker1=search&fm=Search&iid=5e316c9f-49d5-4da0-8b9a-8c271cf605a4.BOTEMTA4GWWCGBC6.SEARCH&ppt=sp&ppn=sp&ssid=kkzccohfkw0000001645167943485&qH=22462580b1e78d2a">cello H2O 1000 ml Bottle  (Pack of 3, Multicolor, Plastic)</a></h3>
+                    <div class="price discount"> Rs.377</div>
+                </div>
+            </div>
+        </div>
+           
+           
+           
+           <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/l.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/ll.jpg" style="height:240px">
+                    </a>
+                   
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/24-hours-organic-fliptop-bottle-face-liquid-store-set-5-100-ml-pack-5-100/p/itmacce6e71e2ec5?pid=BOTFTGDTEZ4R98PU&lid=LSTBOTFTGDTEZ4R98PUFXH30G&marketplace=FLIPKART&q=plastic+bottles&store=upp%2Ff2k%2F0zz&srno=s_1_16&otracker=search&otracker1=search&fm=Search&iid=en_ffKXgh3TlZOdefxBwW6FxBuMa4hlxtCOgdLpOpuRF7Sw6DRlG%2F7W%2FNUyKraiu8ElY8I%2BCU34kBssCcKBsaycvg%3D%3D&ppt=sp&ppn=sp&ssid=kkzccohfkw0000001645167943485&qH=22462580b1e78d2a">24 Hours Organic Fliptop Bottle for Face / Liquid Store Bottle (Set Of 5)100 ml (Pack of 5) 100 ml Bottle  (Pack of 5, White, Plastic)</a></h3>
+                    <div class="price discount"> Rs.157</div>
+                </div>
+            </div>
+        </div> 
+           
+            
+              <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/q.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/qq.jpg" style="height:240px">
+                    </a>
+                    <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">10%</span>
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/kingsman-mans-wear-6-pieces-pattern-plastic-water-bottle-multi-colored-1000-ml/p/itmd044591547aa6?pid=BOTGFXVWFRYWTUFB&lid=LSTBOTGFXVWFRYWTUFBLY9NL7&marketplace=FLIPKART&q=plastic+bottles&store=upp%2Ff2k%2F0zz&srno=s_1_18&otracker=search&otracker1=search&fm=Search&iid=5e316c9f-49d5-4da0-8b9a-8c271cf605a4.BOTGFXVWFRYWTUFB.SEARCH&ppt=sp&ppn=sp&ssid=kkzccohfkw0000001645167943485&qH=22462580b1e78d2a">KINGSMAN MANS WEAR 6 Pieces Pattern Plastic Water bottle multi colored 1000 ml Bottle  (Pack of 6, Multicolor, PET)
+                    </a></h3>
+                    <div class="price discount"><SPAN>Rs.899</SPAN> Rs.809</div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+<hr>
+<div class="cat-title">TABLES</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/hy.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/hy2.jpg" style="height:240px">
+                    </a>
+                    <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">10%  OFF</span>
+                  
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/esquire-plastic-coffee-table/p/itm2f9442347361b?pid=CFTG6BNZRUBDNE8Y&lid=LSTCFTG6BNZRUBDNE8YUAEFCZ&marketplace=FLIPKART&q=plastic+tables&store=wwe%2Fki7&srno=s_1_4&otracker=search&otracker1=search&fm=Search&iid=cc9037b3-df1e-4479-98d6-029561141857.CFTG6BNZRUBDNE8Y.SEARCH&ppt=sp&ppn=sp&ssid=5bv3f0gif40000001645165751593&qH=9c9a85875c9dac56">Esquire Plastic Coffee Table  (Finish Color - BLACK, DIY(Do-It-Yourself))</a></h3>
+                    <div class="price discount"><span>Rs.599</span>Rs.539</div>
+                </div>
+            </div>
+        </div>  
+
+
+
+        <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/hyk2.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/hyk.jpg" style="height:240px">
+                    </a>
+                    <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">23%  OFF</span>
+                   
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/esquire-plastic-coffee-table/p/itmf69c19163325e?pid=CFTFX4HFJNARNVQH&lid=LSTCFTFX4HFJNARNVQHLG4BW7&marketplace=FLIPKART&q=plastic+tables&store=wwe%2Fki7&srno=s_1_7&otracker=search&otracker1=search&fm=Search&iid=1de15baf-1765-4fc3-b8db-db3aada3ea0b.CFTFX4HFJNARNVQH.SEARCH&ppt=sp&ppn=sp&ssid=twk05vxgnk0000001645168940062&qH=9c9a85875c9dac56">Esquire Plastic Coffee Table  (Finish Color - Brown, DIY(Do-It-Yourself))</a></h3>
+                    <div class="price discount"> <span>Rs.749</span>Rs.576</div>
+                </div>
+            </div>
+        </div>
+           
+           
+           
+           <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/lg.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/lg2.jpg" style="height:240px">
+                    </a>
+                     <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">9%  OFF</span>
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/avro-furniture-delta-plastic-outdoor-table/p/itm294f05e3d095e?pid=DNTFG9S87JFUPCPM&lid=LSTDNTFG9S87JFUPCPM3ND0R9&marketplace=FLIPKART&q=plastic+tables&store=wwe%2Fki7&srno=s_1_9&otracker=search&otracker1=search&fm=Search&iid=1de15baf-1765-4fc3-b8db-db3aada3ea0b.DNTFG9S87JFUPCPM.SEARCH&ppt=sp&ppn=sp&ssid=twk05vxgnk0000001645168940062&qH=9c9a85875c9dac56">AVRO furniture DELTA Plastic Outdoor Table  (Finish Color - BROWN, DIY(Do-It-Yourself))</a></h3>
+                    <div class="price discount"> <span>Rs.1,979</span>Rs.1,800</div>
+                </div>
+            </div>
+        </div> 
+           
+            
+              <div class="col-md-3 col-sm-6">
+            <div class="product-grid">
+                <div class="product-image">
+                    <a href="#">
+                        <img class="pic-1" src="../img/cp.jpg" style="height:240px">
+                        <img class="pic-2" src="../img/cp2.jpg" style="height:240px">
+                    </a>
+                    <span class="product-trend-label">ON OFFER</span>
+	  <span class="product-discount-label">16%</span>
+                    
+                </div>
+                <div class="product-content">
+                    <h3 class="title"><a href="https://www.flipkart.com/nilkamal-centble-2-plastic-coffee-table/p/itm03a9de0d72643?pid=CFTFDWKJJHHQFSYT&lid=LSTCFTFDWKJJHHQFSYTA6PT2S&marketplace=FLIPKART&q=plastic+tables&store=wwe%2Fki7&srno=s_1_18&otracker=search&otracker1=search&fm=Search&iid=1de15baf-1765-4fc3-b8db-db3aada3ea0b.CFTFDWKJJHHQFSYT.SEARCH&ppt=sp&ppn=sp&qH=9c9a85875c9dac56">Nilkamal Centble 2 Plastic Coffee Table  (Finish Color - Pear wood, DIY(Do-It-Yourself))
+                    </a></h3>
+                    <div class="price discount"><SPAN>Rs.1,249</SPAN> Rs.1049</div>
+                </div>
+            </div>
+        </div>
+     </div>
+</div>
+
+
+<div class="footr">
+
+	<div class="footr-two-col">
+		<img src="../img/logo.png" width="182" height="90.5">
+	</div>
+
+	<div class="footr-two-col">
+		<a href="https://www.facebook.com/nannu.garg.106"><img src="../img/fb.png" width="45px"></a>
+		<a href="https://www.instagram.com/kartikey.garg.106/"><img src="../img/insta.png" width="45px"></a>
+		<a href="https://twitter.com/kartikeygarg57"><img src="../img/twitter.png" width="45px"></a>	
+	</div>
+
+
+</div>
+
+<div class="footer-bottom">
+	By using this site, you accept to our <a href="Terms and Conditions.html">terms and conditions</a>&emsp;	&copy; 2022-2022 Plastica.com, Inc.
+</div>
