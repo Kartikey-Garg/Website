@@ -4,6 +4,7 @@ is a Plastic products based website, providing shipment for plastic items such a
 is the homepage of website 
 # img
 folder contains all the image sused in this webiste
-**\nRemaining sub-pages are in css folder**
+# css
+Contains all the .css files and remaining sub-pages of website
 # js
 folder has Java Script file for the site
