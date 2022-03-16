@@ -1,0 +1,209 @@
+<html>
+<head>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="logincss.css">
+	<link rel="icon" href="../img/logo.png" type="image" sizes="16x16">
+</head>
+
+<title> Plastica Login </title>
+
+<style>
+
+	.footr {
+		border:2px solid #323232;
+		background-color:#323232;
+		width:99.7%;
+		margin-top:10%px;
+		padding-top:1.5%;
+		padding-bottom:2%;
+		overflow:auto;
+		bottom:0;
+	}
+
+	.footer-bottom {
+		background:#323232;
+		color:#686868;
+		height:40px;
+		width:100%;
+		text-align:center;
+		padding-top:10px;
+	}
+
+	.footr-two-col {
+		width:33%;
+		float:left;
+	}
+
+	.footr-link a:link {
+		font-size:120%;
+		color:white;
+	}
+
+	.footr-link a:visited {
+		color:white;
+	}
+
+	.footr-link a:hover {
+		color:#686868;
+	}
+
+	.navbar {
+		top:0;left:0;
+		overflow: hidden;
+		background-color: #323232;
+		position:fixed;
+		width:100%;
+		padding:4px 16px;z-index:5;
+	}
+	.navimg {
+		float:right;
+		padding-right:10px;
+		font-size: 100%;
+	}
+	.tab a {
+ 		float:left;
+		display: block;
+		color: #cccfd1;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 100%;
+		font-family: "georgia";
+		padding-left:20px;
+	}
+	.tab a:hover {
+		color:#d1d1d1;
+		background-color:#565759;
+		border-radius:4px;
+	}
+
+	.navimg a {
+ 		float:left;
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-family: "georgia";
+		padding-left:20px;
+	}
+	.navimg a:hover {
+		color:#133246;
+		border-radius:4px;
+	}
+
+@media (max-width:768px) {
+
+		body, html {
+			height:100%;
+			margin:0;
+			line-height:180%;
+			color:#666;
+			text-align:center;
+		}
+
+		.navbar {
+			width:100%;
+		}
+
+		.tab a {
+			padding-left:5px;
+			font-size:80%;
+		}
+
+
+		.footr-two-col {
+			width:90%;
+			padding-bottom:2%;
+			margin:0 auto;
+			margin-left:auto;
+			margin-right:auto;
+		}
+
+
+		.footr {
+			width:98.9%;
+			margin-top:10%px;
+			padding-top:1.5%;
+			padding-bottom:2%;
+			overflow:hidden;
+			bottom:0;
+		}
+
+
+		.navimg { 
+			float:left;
+		}
+		
+		.tab a {
+			float:left;
+		}
+
+	}
+
+</style>
+
+<body>
+
+<div class="navbar">
+	<div class="tab">
+		<a class="active" href="../index.html">HOME</a>
+		<a href="../css/login.html">LOGIN</a>		
+		<a href="../css/category.html">PRODUCTS</a>
+		<a href="../css/about_2.html">ABOUT US</a>			
+	</div>
+	<div class="navimg">
+		<a href="https://www.facebook.com/"><img src="../img/fb.png" width="45px"></a>
+		<a href="https://www.instagram.com/accounts/login/"><img src="../img/insta.png" width="45px"></a>
+		<a href="https://twitter.com/login"><img src="../img/twitter.png" width="45px"></a>	
+	</div>
+</div>
+<br><br><br><br><br><br><br>
+<div id="responsive">
+	<div class="top">
+		<h1>Login</h1> <br>
+    
+	<form action="/action_page.php">
+	<input type="text" id="name" name="uname" onchange="myFun()" placeholder="Username..." autocomplete="off" required >
+	<input type="password" name="password" placeholder="Password..." autocomplete="off" required >
+	<input type="password" name="password2" placeholder="Confirm Password..." autocomplete="off" required  ><br>
+	<div class="remember"><input type="checkbox" name="remember">Remember Me<br></div>
+    	<input type="submit" value="Log In"> <br> <br> 
+	
+  	<br><center><a href="signup.html">New Here? Create An Account</a><center> </form>
+	
+	</div>
+</div>
+<br><br><br><br><br><br><br>
+<div class="footr">
+
+	<div class="footr-two-col">
+		<img src="../img/logo.png" width="182" height="90.5">
+	</div>
+
+	<div class="footr-two-col">
+		<a href="https://www.facebook.com/nannu.garg.106"><img src="../img/fb.png" width="45px"></a>
+		<a href="https://www.instagram.com/kartikey.garg.106/"><img src="../img/insta.png" width="45px"></a>
+		<a href="https://twitter.com/kartikeygarg57"><img src="../img/twitter.png" width="45px"></a>	
+	</div>
+
+
+</div>
+
+<div class="footer-bottom">
+	By using this site, you accept to our <a href="Terms and Conditions.html">terms and conditions</a>&emsp;	&copy; 2022-2022 Plastica.com, Inc.
+</div>
+</body>
+<script>
+	function mOver(obj) {
+    obj.innerHTML = "Click here to write username"
+}
+function myFun() {
+    var x = document.getElementById("name");
+    x.value = x.value.toUpperCase();
+}
+
+</script>
+</html>
