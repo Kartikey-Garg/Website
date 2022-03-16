@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<title>Sign Up</title>
+<meta http-equiv="refresh" content="10">
+</head>
+<style>
+{form, p, body, h2, div.background}
+form,p {text-align:center;}
+.tranbox {margin:30px;background-color: #ffffff;opacity:0.8;}
+body {background-color:lightgrey;}
+h2 {text-decoration:underline;}
+div.background {
+border:10px outset grey;
+background-image: url('download.jpg');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+
+input {margin-left:auto;margin-right:auto;}
+</style>
+<body>
+<div class="background">
+<div class="tranbox">
+<b>
+<h2 style="text-align:center">Sign Up Page</h2>
+<form>
+<br>
+First Name: <input type="text" name="fname">
+<br> <br>
+Last Name: <input type="text" name="lname">
+<br><br>
+Email: <input type="email" name="email">
+<br>
+<pre>Please Write Contact with your Country Code.
+For Example: India -> +91.
+So Contact will be read: +91xxxxxxxxxx
+(Note: Phone Number is required so that we can assist you (by any means) in case of any problem yu face whikle using this platform)</pre>
+Contact: <input type="number" name="phone">
+<br>
+<pre>You must be 13 years or older before making any action in this site</pre>
+Date of Birth: <input type="date" name="dob">
+<br><br>
+Gender: 
+<input type="radio" name="male">Male
+<input type="radio" name="female">Female
+<br>
+<pre>Create Your username and password.
+Note: Your user name can be same as your Email address</pre>
+Username: <input type="username" name="uname">
+<br><br>
+Password: <input type="password" name="psw">
+<br><br>
+Confirm Password: <input type="password" name="cpsw">
+<br>
+<pre>Please Confirm whether you are a Buyer or a Seller.
+You can change this later in Accounts > Preferrences.</pre>
+<input type="radio" name="buyer">Buyer
+<input type="radio" name="seller">Seller
+<br><br>
+<button type="button" onclick="alert('Form Sent Successfully')">Submit</button>
+</form>
+<p>Already have an account. <a href="Link">Sign In</a></p>
+</b>
+<footer>By Signing up you accept to our <a href="Link">Terms & Conditions</a></footer>
+</div></div>
+<p>By using this site, you agree to our <a href="Terms and Conditions.html" style="color:blue;text-decoration:underline" target="_blank">Terms & Conditions</a></p></body>
+</html>

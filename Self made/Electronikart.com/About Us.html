@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)file:///C:/Users/Kartikey%20Garg/Desktop/IBM%20Training/About%20Us.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>About Us</title>
+<style>
+body a {text-decoration:none;}
+a:link {color:black;}
+a:visited {color:black;}
+    h2 {
+        text-align:center;
+    }
+    tr {
+        width:100%;
+    }
+    table {
+        margin-left:auto;
+        margin-right:auto;
+    }
+</style>
+
+</head>
+
+<body>        
+<div class="location" id="abc" style="text-align:center">
+    <p id="demo"></p></div>
+    <script>
+        var greeting;
+        var time = new Date().getHours();
+        if (time < 12) {
+            greeting = "Good morning";
+        } else if (time < 17) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+    document.getElementById("demo").innerHTML = Date()+" | <strong>"+greeting+", Visitor</strong> | Your PINCODE <u>220009</u> <u>Change</u>";
+    </script>
+<hr>
+    <table style="width:100%">
+        <tbody><tr>
+            <td><a href="file:///C:/Users/Kartikey%20Garg/Desktop/IBM%20Training/Homepage.html" style="float:left;">Back to Homepage</a></td>
+            <td><p style="float:left;">&#8195;Menu&#8195;</p></td>
+            <td><textarea type="message" row="1" column="15" placeholder="Type here to search"></textarea></td>
+            <td><input type="submit" value="Search"></td>
+        </tr>
+    </tbody></table>
+<hr>
+<div class="sec3">
+<p><a href="file:///C:/Users/Kartikey%20Garg/Desktop/IBM%20Training/Homepage.html">Home&#8195;&gt;&#8195;About Us</a></p>
+</div>
+<h2>About</h2>
+<img id="iamge" onclick="image()" src="./About Us_files/about.jpg" alt="All together Photo" style="display:block; height:300px; margin-left:auto;margin-right:auto; background-color: yellow;box-shadow: 10px 10px;">
+    
+    <script>
+        function image() {
+            var x=document.getElementById("iamge");
+            if (x.src.match("bulbon")){
+                x.src="about.jpg";
+            }
+            else {
+                x.src="about2.jpg";
+            }
+        }
+    </script>
+    
+    <br>
+    <p></p><table><tbody><tr><td>
+        <div id="container">
+            <div id="inner">
+    <p style="width: 300px;
+    height: 100px;
+    padding: 15px;
+    background-color: yellow;
+    box-shadow: 10px 10px;
+">The company was established in 2022.
+<br>
+&#8195; We sell all the electronic Items from TV, Fridge to 
+Smartphones,Tablets, Computer and accessories etc..
+<br>
+&#8195; We are available 24/7 hrs.
+    </p></div></</td>
+    <td style="padding-left:100px">
+    <h3>Top Brands</h3><ul style="width: 300px;
+    height: 150px;
+    padding: 15px;
+    background-color: skyblue;
+    box-shadow: 10px 10px;
+">
+<li>Havells India Ltd</li>
+<li>Aar em Electronics</li>
+<li>Bajaj Electronics</li>
+<li>Midas Communication Technologies.</li>
+<li>The Kirloskar Electric Company Limited</li>
+<li>Jabil Circuits</li>
+<p>And Many more, view a full list <a href="file:///C:/Users/Kartikey%20Garg/Desktop/IBM%20Training/lkjh">Here</a></p>
+</ul>
+</td>
+</tr></tbody></table>
+     <div class="achieve">
+            <h3 style="text-align:center">Achievements</h3>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><img src="./About Us_files/achieve1.jpg"></td>
+                        <td><img src="./About Us_files/achieve2.jpg"></td>
+                        <td><img src="./About Us_files/achieve3.jpg"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            <p>By using this site, you agree to our <a href="Terms and Conditions.html" style="color:blue;text-decoration:underline" target="_blank">Terms & Conditions</a></p>
+</body></html>
