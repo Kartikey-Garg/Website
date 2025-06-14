@@ -1,4 +1,4 @@
-langflow
-setuptools
+setuptools>=61
 wheel
 build
+langflow
