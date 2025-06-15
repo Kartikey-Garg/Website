@@ -1,8 +1,6 @@
-from langflow import load_flow_from_json
+import json
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-
-flow = load_flow_from_json("langflow_config.json")
 
 app = FastAPI()
 
@@ -15,7 +13,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/api/v1/run/<flow_id>")
-async def run_flow(flow_id: str, request: Request):
+# Load your exported Langflow JSON (for demo, just loads the file)
+with open("clause-explainer-llm.json", "r") as f:
+    flow_data = json.load(f)
+
+@app.post("/explain")
+async def explain_clause(request: Request):
     data = await request.json()
-    return flow(data["input_value"])
+    clause = data.get("clause", "")
+    # For demo: just echo the clause. You can add lookup logic here if your JSON has mappings.
+    return {"explanation": f"Explanation for: {clause}"}
