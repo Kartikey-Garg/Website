@@ -1,4 +1,4 @@
-setuptools>=65.0.0
+setuptools>=65.5.0
 wheel
 --prefer-binary
 pandas==1.5.3
