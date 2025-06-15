@@ -1,5 +1,7 @@
-setuptools>=65.5.0
+setuptools>=64
+setuptools_scm>=8
 wheel
---prefer-binary
-pandas==1.5.3
-langflow
+langflow==1.4.22
+uvicorn
+fastapi
+python-dotenv
