@@ -1,5 +1,5 @@
 # Build tools
-setuptools>=61
+setuptools>=42
 wheel
 build
 
