@@ -1,8 +1,7 @@
 #!/bin/bash
 
-# Upgrade pip and install build dependencies
-pip install --upgrade pip
-pip install -r build-requirements.txt
+# Ensure latest pip + build tools
+pip install --upgrade pip setuptools wheel build
 
-# Install main dependencies
+# Now install the main requirements
 pip install -r requirements.txt
