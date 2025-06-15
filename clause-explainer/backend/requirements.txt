@@ -2,7 +2,6 @@
 setuptools>=61
 wheel
 build
-poetry-core>=1.0.0
 
 # Langflow core
 langflow
