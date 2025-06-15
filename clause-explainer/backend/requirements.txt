@@ -1,1 +1,3 @@
+--prefer-binary
+pandas==1.5.3
 langflow
