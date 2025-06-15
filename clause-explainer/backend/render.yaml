@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: langflow-backend
+    runtime: python
+    env: python
+    region: oregon  # or `frankfurt`, `singapore`, etc. if closer
+    buildCommand: |
+      pip install --upgrade pip setuptools wheel
+      pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11
+    plan: free
+    autoDeploy: true
+  
